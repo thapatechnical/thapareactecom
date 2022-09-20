@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+Welcome to Thapa Technical React Ecommerce Webstie Sereis. 
+
+Follow the 3 Steps and your good to go. 
+1: Clone the Project 
+2: simply run the command 
+   npm install 
+   First to install all the packages
+3: run the project using npm start
+
+# Getting Started with Create React App 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
