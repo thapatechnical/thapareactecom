@@ -1,4 +1,4 @@
-# Welcome to Thapa Technical React Ecommerce Webstie Sereis. 
+# Welcome to Thapa Technical React Ecommerce Webstie Series 
 
 ## Follow the 3 Steps and your good to go. 
 
@@ -8,7 +8,10 @@
    ### `npm install` 
    First to install all the packages
    
-3: run the project using ## `npm start`
+3: run the project using 
+   ### `npm start`
+   
+   ---
 
 # Getting Started with Create React App 
 
