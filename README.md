@@ -13,7 +13,7 @@
    
    ------------ 
    
-##   I also updated the Source Code to get the source code guy's please check the `Switch branches/tags` and select the respective video branch for the source code ok..  
+##   I also update the Source Code to get the source code guy's please check the `Switch branches/tags` and select the respective video branch for the source code ok..  
 
 ------------ 
 
