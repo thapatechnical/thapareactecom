@@ -14,7 +14,7 @@
 
 ------------ 
 
-- [Main Starter Files of React Ecom Code](https://github.com/thapatechnical/thapareactecom/blob/main/README.md)
+- [Main Starter Files of React Ecom Source Code](https://github.com/thapatechnical/thapareactecom/blob/main/README.md)
 
 - [Till Video 6 Source Code - Responsive Navbar](https://github.com/thapatechnical/thapareactecom/tree/react_ecom_navbar_v6) 
 
