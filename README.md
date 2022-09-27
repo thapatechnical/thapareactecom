@@ -20,3 +20,9 @@
 
 - [Till Video 6 Source Code - Responsive Navbar](https://github.com/thapatechnical/thapareactecom/tree/react_ecom_navbar_v6) 
 
+- [Video 7 Source Code - Hero Section, Home & About Page](https://github.com/thapatechnical/thapareactecom/blob/react_ecom_HomeAboutPage_v7/src/components/HeroSection.js) 
+
+
+
+
+
