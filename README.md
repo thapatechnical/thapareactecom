@@ -22,7 +22,7 @@
 
 - [Video 7 Source Code - Hero Section, Home & About Page](https://github.com/thapatechnical/thapareactecom/blob/react_ecom_HomeAboutPage_v7/src/components/HeroSection.js) 
 
-
+- [Video 8 Source Code - Services & Trusted Section](https://github.com/thapatechnical/thapareactecom/tree/service_trusted_sec_v8) 
 
 
 
