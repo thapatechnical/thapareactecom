@@ -24,5 +24,9 @@
 
 - [Video 8 Source Code - Services & Trusted Section](https://github.com/thapatechnical/thapareactecom/tree/service_trusted_sec_v8) 
 
+- [Video 9 Source Code - Contact Page with Email](https://github.com/thapatechnical/thapareactecom/tree/ecom_contact_v9) 
+
+
+
 
 
