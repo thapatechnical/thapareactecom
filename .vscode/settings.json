@@ -1,6 +1,6 @@
 {
   "cSpell.words": ["filterproduct"],
-  "workbench.activityBar.visible": true,
+  "workbench.activityBar.visible": false,
   "workbench.colorCustomizations": {},
   "json.schemas": []
 }
