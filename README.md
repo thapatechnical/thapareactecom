@@ -34,6 +34,8 @@
 
 - [Video 13 Source Code - fech API data with Axios ](https://github.com/thapatechnical/thapareactecom/tree/ecom_apiAxious_v13)
 
+- [Video 14 Source Code - useReducer Hook for State mang. ](https://github.com/thapatechnical/thapareactecom/tree/ecom_productReducer_v14)
+
 
 
 
