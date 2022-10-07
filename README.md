@@ -32,10 +32,11 @@
 
 - [Video 12 Source Code - Context API ](https://github.com/thapatechnical/thapareactecom/tree/ecom_productContext_v12)
 
-- [Video 13 Source Code - fech API data with Axios ](https://github.com/thapatechnical/thapareactecom/tree/ecom_apiAxious_v13)
+- [Video 13 Source Code - Fech API data with Axios ](https://github.com/thapatechnical/thapareactecom/tree/ecom_apiAxious_v13)
 
 - [Video 14 Source Code - useReducer Hook for State mang. ](https://github.com/thapatechnical/thapareactecom/tree/ecom_productReducer_v14)
 
+- [Video 15 Source Code - Feature Section Of Home Page ](https://github.com/thapatechnical/thapareactecom/tree/ecom_featureSec_v15)
 
 
 
