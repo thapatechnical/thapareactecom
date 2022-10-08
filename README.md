@@ -38,6 +38,10 @@
 
 - [Video 15 Source Code - Feature Section Of Home Page ](https://github.com/thapatechnical/thapareactecom/tree/ecom_featureSec_v15)
 
+- [Video 16 Source Code - Format Price Indian Currency ](https://github.com/thapatechnical/thapareactecom/tree/ecom_formatPrice_v16)
+
+
+
 
 
 
