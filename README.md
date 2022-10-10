@@ -40,6 +40,11 @@
 
 - [Video 16 Source Code - Format Price Indian Currency ](https://github.com/thapatechnical/thapareactecom/tree/ecom_formatPrice_v16)
 
+- [Video 17th & 18th Source Code - Format Price Indian Currency ](https://github.com/thapatechnical/thapareactecom/tree/ecom_singleProduct_Context_v17)
+
+
+
+
 
 
 
