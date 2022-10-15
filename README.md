@@ -46,6 +46,9 @@
 
 - [Video 20 Source Code - Dynmaic Image Filter Section   ](https://github.com/thapatechnical/thapareactecom/tree/ecom_dynamicImage_v20)
 
+- [Video 21 Source Code - Star Ratings & Reviews Section   ](https://github.com/thapatechnical/thapareactecom/tree/ecom_starratings_v21)
+
+
 
 
 
