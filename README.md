@@ -48,6 +48,13 @@
 
 - [Video 21 Source Code - Star Ratings & Reviews Section   ](https://github.com/thapatechnical/thapareactecom/tree/ecom_starratings_v21)
 
+- [Video 22 Source Code - Dynamic Color Section   ](https://github.com/thapatechnical/thapareactecom/tree/ecom_color_cart_v22)
+
+- [Video 23 Source Code - Product Quantity Section   ](https://github.com/thapatechnical/thapareactecom/tree/ecom_color_cart_v22)
+
+
+
+
 
 
 
