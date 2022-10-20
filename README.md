@@ -54,6 +54,11 @@
 
 - [Video 24 & 25 Source Code - Products Page Conext Setup  ](https://github.com/thapatechnical/thapareactecom/tree/ecom_gridlist_v26)
 
+- [Video 26, 27 & 28 Source Code - Products Page Sorting  ](https://github.com/thapatechnical/thapareactecom/tree/ecom_sorting_dropdown)
+
+
+
+
 
 
 
