@@ -56,6 +56,12 @@
 
 - [Video 26, 27 & 28 Source Code - Products Page Sorting  ](https://github.com/thapatechnical/thapareactecom/tree/ecom_sorting_dropdown)
 
-- [Video 29, 30. 31 & 32 Source Code - Products Page Sorting completed ](https://github.com/thapatechnical/thapareactecom/tree/ecom_sorting_simplified_v32)
+- [Video 29, 30, 31 & 32 Source Code - Products Page Sorting completed ](https://github.com/thapatechnical/thapareactecom/tree/ecom_sorting_simplified_v32)
+
+- [Video 33, 34, 35, 36 & 37 Source Code - Products Page Sorting completed ](https://github.com/thapatechnical/thapareactecom/tree/ecom_colorsfilter_v37)
+
+
+
+
 
 
