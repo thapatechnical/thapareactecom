@@ -74,7 +74,7 @@ const filterReducer = (state, action) => {
       let { all_products } = state;
       let tempFilterProduct = [...all_products];
 
-      const { text, category, company } = state.filters;
+      const { text, category, company, color } = state.filters;
 
       if (text) {
         tempFilterProduct = tempFilterProduct.filter((curElem) => {
@@ -82,24 +82,23 @@ const filterReducer = (state, action) => {
         });
       }
 
-      if (category) {
-        tempFilterProduct = tempFilterProduct.filter((curElem) => {
-          return curElem.category === category;
-        });
-      }
-
-      // if (company) {
-      //   tempFilterProduct = tempFilterProduct.filter((curElem) => {
-      //     return curElem.company === company;
-      //   });
-      // }
-
-      if (company !== "all") {
+      if (category !== "all") {
         tempFilterProduct = tempFilterProduct.filter(
-          (c) => c.company === company
+          (curElem) => curElem.category === category
         );
       }
 
+      if (company !== "all") {
+        tempFilterProduct = tempFilterProduct.filter(
+          (curElem) => curElem.company.toLowerCase() === company.toLowerCase()
+        );
+      }
+
+      if (color) {
+        tempFilterProduct = tempFilterProduct.filter((curElem) =>
+          curElem.colors.includes(color)
+        );
+      }
       return {
         ...state,
         filter_products: tempFilterProduct,
