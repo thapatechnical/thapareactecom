@@ -64,6 +64,8 @@
 
 - [Video 41, 42, & 43 Source Code - Product Filter completed ](https://github.com/thapatechnical/thapareactecom/tree/ecom_cart_remove_v47)
 
+- [Video 44 Source Code - Cart Context & Reducer ](https://github.com/thapatechnical/thapareactecom/tree/ecom_cart_remove_v47)
+
 
 
 
