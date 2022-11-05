@@ -62,6 +62,10 @@
 
 - [Video 38, 39, & 40 Source Code - Products Page colors filter done ](https://github.com/thapatechnical/thapareactecom/tree/ecom_colorsAll_v40)
 
+- [Video 41, 42, & 43 Source Code - Product Filter completed ](https://github.com/thapatechnical/thapareactecom/tree/ecom_cart_remove_v47)
+
+
+
 
 
 
