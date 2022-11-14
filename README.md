@@ -68,7 +68,7 @@
 
 - [Video 46 & 47 Source Code - Cart Table & Remove Btn ](https://github.com/thapatechnical/thapareactecom/tree/ecom_cart_remove_v47)
 
-- [Video 48 & 49 Source Code - Till clear Cart Button ](https://github.com/thapatechnical/thapareactecom/tree/ecom_addtocart_clear_v49)
+- [Video 48, 49 & 50 Source Code - Till clear Cart Button ](https://github.com/thapatechnical/thapareactecom/tree/ecom_addtocart_clear_v49)
 
 
 
