@@ -39,6 +39,9 @@ const SingleProduct = () => {
     return <div className="page_loading">Loading.....</div>;
   }
 
+  const discountPrice = 250000; // Discount Value(in Paise)
+  const discountPercentage = ((discountPrice / 100) / ((price + discountPrice) / 100)) * 100; // final price MRP se kitna percent discount me hai
+
   return (
     <Wrapper>
       <PageNavigation title={name} />
@@ -57,11 +60,11 @@ const SingleProduct = () => {
             <p className="product-data-price">
               MRP:
               <del>
-                <FormatPrice price={price + 250000} />
+                <FormatPrice price={price + discountPrice} />
               </del>
             </p>
             <p className="product-data-price product-data-real-price">
-              Deal of the Day: <FormatPrice price={price} />
+              Deal of the Day: <FormatPrice price={price} /> <span className="product-discountPercentage">({Math.ceil(discountPercentage)}% Off)</span>
             </p>
             <p>{description}</p>
             <div className="product-data-warranty">
@@ -152,6 +155,9 @@ const Wrapper = styled.section`
     }
     .product-data-real-price {
       color: ${({ theme }) => theme.colors.btn};
+    }
+    .product-discountPercentage{
+      color : #388e3c;
     }
     .product-data-info {
       display: flex;
