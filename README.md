@@ -1,5 +1,8 @@
 # Welcome to Thapa Technical React Ecommerce Website Series
 
+#deploy link -
+https://thapaecomstore.netlify.app/
+
 ## Follow the 3 Steps and you are good to go. 
 
 1: Clone the Project 
