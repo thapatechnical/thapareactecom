@@ -91,7 +91,7 @@ const filterReducer = (state, action) => {
         ...state,
         filters: {
           ...state.filters,
-          [name]: value,
+           [name]: name === "text" ? value.toLowerCase() : value,
         },
       };
 
