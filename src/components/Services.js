@@ -9,21 +9,21 @@ const Services = () => {
     <Wrapper>
       <div className="container">
         <div className="grid grid-three-column">
-          <div className="services-1">
+          <div className="services-1 div-hover">
             <div>
               <TbTruckDelivery className="icon" />
               <h3>Super Fast and Free Delivery</h3>
             </div>
           </div>
 
-          <div className="services-2">
-            <div className="services-colum-2">
+          <div className="services-2 div-hover">
+            <div className="services-column-2">
               <div>
                 <MdSecurity className="icon" />
                 <h3>Non-contact Shipping</h3>
               </div>
             </div>
-            <div className="services-colum-2">
+            <div className="services-column-2">
               <div>
                 <GiReceiveMoney className="icon" />
                 <h3>Money-back Guaranteed</h3>
@@ -31,7 +31,7 @@ const Services = () => {
             </div>
           </div>
 
-          <div className="services-3">
+          <div className="services-3 div-hover">
             <div>
               <RiSecurePaymentLine className="icon" />
               <h3>Super Secure Payment System</h3>
@@ -49,6 +49,14 @@ const Wrapper = styled.section`
   .grid {
     gap: 4.8rem;
   }
+  
+  .div-hover {
+    transition: transform 0.3s ease;
+  }
+  
+  .div-hover:hover {
+    transform: scale(1.05);
+  }
 
   .services-1,
   .services-2,
@@ -63,6 +71,13 @@ const Wrapper = styled.section`
     text-align: center;
     border-radius: 2rem;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    transition: box-shadow 0.3s ease; /* Added transition for box-shadow */
+  }
+
+  .services-1:hover,
+  .services-2:hover,
+  .services-3:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; /* Enhancing the box shadow on hover */
   }
 
   .services-2 {
@@ -70,7 +85,7 @@ const Wrapper = styled.section`
     background-color: transparent;
     box-shadow: none;
 
-    .services-colum-2 {
+    .services-column-2 {
       background: ${({ theme }) => theme.colors.bg};
       display: flex;
       flex-direction: row;
@@ -79,6 +94,7 @@ const Wrapper = styled.section`
       align-items: center;
       border-radius: 2rem;
       box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+      transition: box-shadow 0.3s ease; /* Added transition for box-shadow */
 
       div {
         display: flex;
@@ -88,21 +104,32 @@ const Wrapper = styled.section`
         gap: 1rem;
       }
     }
+
+    .services-column-2:hover {
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px; /* Enhancing the box shadow on hover */
+    }
   }
 
   h3 {
     margin-top: 1.4rem;
     font-size: 2rem;
+    transition: color 0.3s ease; /* Added transition for color */
   }
 
   .icon {
-    /* font-size: rem; */
     width: 8rem;
     height: 8rem;
     padding: 2rem;
     border-radius: 50%;
     background-color: #fff;
     color: #5138ee;
+    transition: background-color 0.3s ease; /* Added transition for background color */
+  }
+
+  .icon:hover {
+    background-color: #5138ee; /* Changing background color on hover */
+    color: #fff; /* Changing text color on hover */
   }
 `;
+
 export default Services;
