@@ -7,11 +7,14 @@ import { AppProvider } from "./context/productcontex";
 import { FilterContextProvider } from "./context/filter_context";
 import { CartProvider } from "./context/cart_context";
 import { Auth0Provider } from "@auth0/auth0-react";
+// const dotenv = require('dotenv');
+// dotenv.config();
+// console.log(process.env);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const domain = process.env.REACT_APP_AUTH_DOMAIN;
-const clientId = process.env.REACT_APP_CLIENT_ID;
+const domain = 'dev-ih0zvap7uvjfh2kn.us.auth0.com';
+const clientId = 'iYXz1BQUMlQF2o8WxsBLRirKcxSMKlEc';
 
 root.render(
   <Auth0Provider
