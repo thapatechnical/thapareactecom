@@ -5,7 +5,6 @@ import Sort from "./components/Sort";
 import { useFilterContext } from "./context/filter_context";
 import { AnalyticsBrowser } from "@segment/analytics-next";
 const analytics = AnalyticsBrowser.load({ writeKey: "l9phqG3NMhlxAP5YVRt0PV0i760n19qa" });
-
 const Products = () => {
   analytics.page("Page Viewed Products");
   return (

@@ -9,13 +9,6 @@ import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const analytics = AnalyticsBrowser.load({ writeKey: "l9phqG3NMhlxAP5YVRt0PV0i760n19qa" });
-const segmentAccessToken = 'cDaGJK8zhWCdmL3vmk8HazaP8b2WGXJLIXiV00IsbD7HhdtZQwmDEFY_x39wSIRLd-X72V1NPkyiQKxOSz6n5EC97gSWMdcazmUO1pBRoVmQ7vwcrc_VVk-QDZt2wrzRY3NSEbbqjRU010u6iX5GSi2cWEiLKBpQXIeg8oZDqdG9h4eB6kOFVYM11KKd1jD3ZQoDwmbWy-Q9LeypmOHhYIM9dLSK9XgQ-bPqX-TjE8LjX9Puf6B44iTG2LTni3BlFdwEiIQUNPPJUTSNZj0Jz16QuffrqUcjJQ=='
-const segmentSpaceId = 'spa_1mPTocQe7TtlwER38IpyIxtcmC4';
-const onPageEvent = () => {
-  analytics.page("Page Viewed Home");
-  console.log("[onPageEvent]");
-};
-
 const Home = () => {
   const { isAuthenticated, user } = useAuth0();
 
@@ -42,7 +35,7 @@ const Home = () => {
   const data = {
     name: "CDP store",
   };
-  onPageEvent();
+  analytics.page("Page Viewed Home");
   return (
     <>
       <HeroSection myData={data} />

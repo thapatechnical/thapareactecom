@@ -4,12 +4,12 @@ import { AnalyticsBrowser } from "@segment/analytics-next";
 const analytics = AnalyticsBrowser.load({ writeKey: "l9phqG3NMhlxAP5YVRt0PV0i760n19qa" });
 
 const About = () => {
+  analytics.page("Page Viewed About");
   const { myName } = useProductContext();
 
   const data = {
     name: "CDP Ecommerce",
   };
-  analytics.page("Page Viewed About");
 
   return (
     <>

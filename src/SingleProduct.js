@@ -10,9 +10,10 @@ import { MdSecurity } from "react-icons/md";
 import { TbTruckDelivery, TbReplace } from "react-icons/tb";
 import Star from "./components/Star";
 import AddToCart from "./components/AddToCart";
+import { AnalyticsBrowser } from "@segment/analytics-next";
 
+const analytics = AnalyticsBrowser.load({ writeKey: "l9phqG3NMhlxAP5YVRt0PV0i760n19qa" });
 const API = "https://api.pujakaitem.com/api/products";
-
 const SingleProduct = () => {
   const { getSingleProduct, isSingleLoading, singleProduct } =
     useProductContext();
@@ -39,7 +40,7 @@ const SingleProduct = () => {
   if (isSingleLoading) {
     return <div className="page_loading">Loading.....</div>;
   }
-
+  analytics.page("Page Viewed SingleProduct");
   return (
     <Wrapper>
       <PageNavigation title={name} />
@@ -78,7 +79,7 @@ const SingleProduct = () => {
 
               <div className="product-warranty-data">
                 <TbTruckDelivery className="warranty-icon" />
-                <p>Thapa Delivered </p>
+                <p>CDP Delivered </p>
               </div>
 
               <div className="product-warranty-data">
