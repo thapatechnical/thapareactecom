@@ -12,9 +12,7 @@ const analytics = AnalyticsBrowser.load({ writeKey: "l9phqG3NMhlxAP5YVRt0PV0i760
 const segmentAccessToken = 'cDaGJK8zhWCdmL3vmk8HazaP8b2WGXJLIXiV00IsbD7HhdtZQwmDEFY_x39wSIRLd-X72V1NPkyiQKxOSz6n5EC97gSWMdcazmUO1pBRoVmQ7vwcrc_VVk-QDZt2wrzRY3NSEbbqjRU010u6iX5GSi2cWEiLKBpQXIeg8oZDqdG9h4eB6kOFVYM11KKd1jD3ZQoDwmbWy-Q9LeypmOHhYIM9dLSK9XgQ-bPqX-TjE8LjX9Puf6B44iTG2LTni3BlFdwEiIQUNPPJUTSNZj0Jz16QuffrqUcjJQ=='
 const segmentSpaceId = 'spa_1mPTocQe7TtlwER38IpyIxtcmC4';
 const onPageEvent = () => {
-  // process the logEvent object here (send to analytics provider, audit/inspect data)
-  // let user_id = localStorage.getItem("ajs_user_id");
-  analytics.page("Page Viewed");
+  analytics.page("Page Viewed Home");
   console.log("[onPageEvent]");
 };
 

@@ -26,37 +26,6 @@ const Nav = () => {
     // Perform the logout action
     logout({ returnTo: window.location.origin });
   };
-  // useEffect(() => {
-  //   // Check if the user is authenticated
-  //   let isPresent = false;
-  //   // async function fetchData(){
-  //   //   try {
-  //   //     let segmentQuery = await axios({
-  //   //       url: `https://profiles.segment.com/v1/spaces/${segmentSpaceId}/collections/users/profiles/email:${user.name}/traits?limit=100`,
-  //   //       method: 'GET',
-  //   //       auth: {
-  //   //         username: segmentAccessToken,
-  //   //         password:""
-  //   //       }
-  //   //     })
-  //   //     console.log("Result from Segment ", segmentQuery.data);
-  //   //     if(segmentQuery.data.traits.length !== 0)
-  //   //     {
-  //   //       isPresent = true;
-  //   //     }
-  //   //   } catch (error) {
-  //   //     console.log("Error while querying segment ", error);
-  //   //   }
-  //   // }
-  //   // fetchData();
-  //   if (isAuthenticated && !(isPresent)) {
-  //     // Send an identify call to Segment
-  //     console.log("User present in Segment ", isPresent);
-  //     analytics.identify(uuid, {
-  //       email: user.name,
-  //     });
-  //   }
-  // }, [isAuthenticated, user, uuid]);
 
   const Nav = styled.nav`
     .navbar-lists {
