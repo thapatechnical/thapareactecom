@@ -30,12 +30,12 @@ const Home = () => {
       analytics.identify(user_id, {
         email: user.name,
       });
+      analytics.page("Page Viewed Home");
     }
   }, [isAuthenticated, user]);
   const data = {
     name: "CDP store",
   };
-  analytics.page("Page Viewed Home");
   return (
     <>
       <HeroSection myData={data} />
