@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { FiShoppingCart } from "react-icons/fi";
@@ -6,11 +6,57 @@ import { CgMenu, CgClose } from "react-icons/cg";
 import { useCartContext } from "../context/cart_context";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Button } from "../styles/Button";
+import { AnalyticsBrowser } from "@segment/analytics-next";
+import { v4 as uuidv4 } from 'uuid';
+import axios from "axios";
+
+const analytics = AnalyticsBrowser.load({ writeKey: "l9phqG3NMhlxAP5YVRt0PV0i760n19qa" });
+const segmentAccessToken = 'cDaGJK8zhWCdmL3vmk8HazaP8b2WGXJLIXiV00IsbD7HhdtZQwmDEFY_x39wSIRLd-X72V1NPkyiQKxOSz6n5EC97gSWMdcazmUO1pBRoVmQ7vwcrc_VVk-QDZt2wrzRY3NSEbbqjRU010u6iX5GSi2cWEiLKBpQXIeg8oZDqdG9h4eB6kOFVYM11KKd1jD3ZQoDwmbWy-Q9LeypmOHhYIM9dLSK9XgQ-bPqX-TjE8LjX9Puf6B44iTG2LTni3BlFdwEiIQUNPPJUTSNZj0Jz16QuffrqUcjJQ=='
+const segmentSpaceId = 'spa_1mPTocQe7TtlwER38IpyIxtcmC4';
 
 const Nav = () => {
   const [menuIcon, setMenuIcon] = useState();
   const { total_item } = useCartContext();
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
+  let uuid = uuidv4();
+  const handleLogout = () => {
+    // Call analytics.reset() to reset analytics when logging out
+    analytics.reset();
+  
+    // Perform the logout action
+    logout({ returnTo: window.location.origin });
+  };
+  // useEffect(() => {
+  //   // Check if the user is authenticated
+  //   let isPresent = false;
+  //   // async function fetchData(){
+  //   //   try {
+  //   //     let segmentQuery = await axios({
+  //   //       url: `https://profiles.segment.com/v1/spaces/${segmentSpaceId}/collections/users/profiles/email:${user.name}/traits?limit=100`,
+  //   //       method: 'GET',
+  //   //       auth: {
+  //   //         username: segmentAccessToken,
+  //   //         password:""
+  //   //       }
+  //   //     })
+  //   //     console.log("Result from Segment ", segmentQuery.data);
+  //   //     if(segmentQuery.data.traits.length !== 0)
+  //   //     {
+  //   //       isPresent = true;
+  //   //     }
+  //   //   } catch (error) {
+  //   //     console.log("Error while querying segment ", error);
+  //   //   }
+  //   // }
+  //   // fetchData();
+  //   if (isAuthenticated && !(isPresent)) {
+  //     // Send an identify call to Segment
+  //     console.log("User present in Segment ", isPresent);
+  //     analytics.identify(uuid, {
+  //       email: user.name,
+  //     });
+  //   }
+  // }, [isAuthenticated, user, uuid]);
 
   const Nav = styled.nav`
     .navbar-lists {
@@ -208,7 +254,7 @@ const Nav = () => {
           {isAuthenticated ? (
             <li>
               <Button
-                onClick={() => logout({ returnTo: window.location.origin })}>
+                onClick={handleLogout}>
                 Log Out
               </Button>
             </li>
