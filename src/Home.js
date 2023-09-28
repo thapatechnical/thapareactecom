@@ -26,10 +26,10 @@ const Home = () => {
     }
     if (isAuthenticated && !(isPresent)) {
       // Send an identify call to Segment
-      // console.log("User present in Segment ", isPresent);
-      // analytics.identify(user_id, {
-      //   email: user.name,
-      // });
+      console.log("User present in Segment ", isPresent);
+      analytics.identify(user_id, {
+        email: user.name,
+      });
       analytics.page("Page Viewed Home");
     }
   }, [isAuthenticated, user]);
