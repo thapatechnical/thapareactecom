@@ -32,6 +32,11 @@ const Home = () => {
         email: user.name,
       });
       analytics.page("Page Viewed Home");
+      analytics.track("Element Clicked", {
+        attributes: {
+          type: "Home"
+        },
+      });
     }
   }, [isAuthenticated, user]);
   const data = {

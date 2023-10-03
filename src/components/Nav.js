@@ -25,6 +25,15 @@ const Nav = () => {
     logout({ returnTo: window.location.origin });
   };
 
+  const onTrack = (type) => {
+    console.log("Inside track call and type ", type);
+    analytics.track("Element Clicked", {
+      attributes: {
+        type: type
+      },
+    });
+  }
+
   const Nav = styled.nav`
     .navbar-lists {
       display: flex;
@@ -187,7 +196,7 @@ const Nav = () => {
             <NavLink
               to="/"
               className="navbar-link "
-              onClick={() => setMenuIcon(false)}>
+              onClick={() =>{ setMenuIcon(false); onTrack("Home") }}>
               Home
             </NavLink>
           </li>
@@ -195,7 +204,7 @@ const Nav = () => {
             <NavLink
               to="/about"
               className="navbar-link "
-              onClick={() => setMenuIcon(false)}>
+              onClick={() =>{ setMenuIcon(false); onTrack("About") }}>
               About
             </NavLink>
           </li>
@@ -203,7 +212,7 @@ const Nav = () => {
             <NavLink
               to="/products"
               className="navbar-link "
-              onClick={() => setMenuIcon(false)}>
+              onClick={() =>{ setMenuIcon(false); onTrack("Products") }}>
               Products
             </NavLink>
           </li>
@@ -211,7 +220,7 @@ const Nav = () => {
             <NavLink
               to="/contact"
               className="navbar-link "
-              onClick={() => setMenuIcon(false)}>
+              onClick={() =>{ setMenuIcon(false); onTrack("contact") }}>
               Contact
             </NavLink>
           </li>
