@@ -8,7 +8,8 @@ import { v4 as uuidv4 } from 'uuid';
 import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 
-const analytics = AnalyticsBrowser.load({ writeKey: "l9phqG3NMhlxAP5YVRt0PV0i760n19qa" });
+const writeKey = process.env.write_key;
+const analytics = AnalyticsBrowser.load({ writeKey: writeKey });
 const Home = () => {
   const { isAuthenticated, user } = useAuth0();
 

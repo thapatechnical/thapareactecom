@@ -12,7 +12,8 @@ import Star from "./components/Star";
 import AddToCart from "./components/AddToCart";
 import { AnalyticsBrowser } from "@segment/analytics-next";
 
-const analytics = AnalyticsBrowser.load({ writeKey: "l9phqG3NMhlxAP5YVRt0PV0i760n19qa" });
+const writeKey = process.env.write_key;
+const analytics = AnalyticsBrowser.load({ writeKey: writeKey });
 const API = "https://api.pujakaitem.com/api/products";
 const SingleProduct = () => {
   const { getSingleProduct, isSingleLoading, singleProduct } =
