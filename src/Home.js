@@ -9,7 +9,7 @@ import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
 
 const writeKey = process.env.WRITE_KEY;
-const analytics = AnalyticsBrowser.load({ writeKey: writeKey });
+const analytics = AnalyticsBrowser.load({ writeKey: "trt2mhv6rjiqM8rpsRExWM1pBiguWqUm" });
 const Home = () => {
   const { isAuthenticated, user } = useAuth0();
 

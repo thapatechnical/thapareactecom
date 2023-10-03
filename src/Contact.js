@@ -3,7 +3,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import styled from "styled-components";
 import { AnalyticsBrowser } from "@segment/analytics-next";
 const writeKey = process.env.write_key;
-const analytics = AnalyticsBrowser.load({ writeKey: writeKey });
+const analytics = AnalyticsBrowser.load({ writeKey: "trt2mhv6rjiqM8rpsRExWM1pBiguWqUm" });
 
 const Contact = () => {
   const { isAuthenticated, user } = useAuth0();
