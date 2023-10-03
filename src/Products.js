@@ -4,7 +4,7 @@ import ProductList from "./components/ProductList";
 import Sort from "./components/Sort";
 import { useFilterContext } from "./context/filter_context";
 import { AnalyticsBrowser } from "@segment/analytics-next";
-const writeKey = process.env.write_key;
+const writeKey = process.env.WRITE_KEY;
 const analytics = AnalyticsBrowser.load({ writeKey: writeKey });
 const Products = () => {
   analytics.page("Page Viewed Products");
