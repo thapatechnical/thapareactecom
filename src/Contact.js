@@ -40,11 +40,16 @@ const Contact = () => {
     }
   `;
   analytics.page("Page Viewed Contacts");
-  analytics.track("Element Clicked", {
+  let properties = {
     attributes: {
       type: "Contacts"
-    },
-  });
+    }
+  };
+  if(isAuthenticated)
+  {
+    properties.attributes.email = user.email;
+  }
+  analytics.track("Element Clicked", properties);
   return (
     <Wrapper>
       <h2 className="common-heading">Contact page</h2>

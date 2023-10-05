@@ -34,7 +34,8 @@ const Home = () => {
       analytics.page("Page Viewed Home");
       analytics.track("Element Clicked", {
         attributes: {
-          type: "Home"
+          type: "Home",
+          email: user.name
         },
       });
     }

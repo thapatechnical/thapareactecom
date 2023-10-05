@@ -9,11 +9,16 @@ const analytics = AnalyticsBrowser.load({ writeKey: "trt2mhv6rjiqM8rpsRExWM1pBig
 const About = () => {
   const { isAuthenticated, user } = useAuth0();
   analytics.page("Page Viewed About");
-  analytics.track("Element Clicked", {
+  let properties = {
     attributes: {
       type: "About"
-    },
-  });
+    }
+  };
+  if(isAuthenticated)
+  {
+    properties.attributes.email = user.email;
+  }
+  analytics.track("Element Clicked", properties);
   const { myName } = useProductContext();
 
   const data = {
