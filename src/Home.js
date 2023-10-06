@@ -54,12 +54,8 @@ const Home = () => {
           type: "Home",
           email: user.name
         },
-      },{
-        context: {
-          consent:{
-            hubspotutk : hubspotutk
-          }
-        }
+      },{       
+         hubspotutk:hubspotutk
       });
     }
   }, [isAuthenticated, user]);
