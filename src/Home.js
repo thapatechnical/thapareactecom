@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import HeroSection from "./components/HeroSection";
 import Services from "./components/Services";
 import Trusted from "./components/Trusted";
-import { AnalyticsBrowser } from "@segment/analytics-next";
+import { AnalyticsBrowser} from "@segment/analytics-next";
 import { v4 as uuidv4 } from 'uuid';
 import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
@@ -17,6 +17,23 @@ const Home = () => {
     // Check if the user is authenticated
     let isPresent = false;
     let user_id = localStorage.getItem("ajs_user_id");
+    // Read cookies using document.cookie
+    const cookies = document.cookie;
+
+    // Parse cookies into an object
+    const cookieObject = cookies
+      .split(';')
+      .map(cookie => cookie.trim().split('='))
+      .reduce((acc, [key, value]) => {
+        acc[key] = value;
+        return acc;
+      }, {});
+
+    // Access individual cookies by name
+    const hubspotutk = cookieObject.hubspotutk;
+
+    // Do something with the cookie value
+    console.log('Hubspot utk:', hubspotutk);
 
     // Check if ajs_user_id is present and not null
     if (user_id && user_id !== "null") {
@@ -37,6 +54,12 @@ const Home = () => {
           type: "Home",
           email: user.name
         },
+      },{
+        context: {
+          consent:{
+            hubspotutk : hubspotutk
+          }
+        }
       });
     }
   }, [isAuthenticated, user]);
