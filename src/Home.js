@@ -47,15 +47,15 @@ const Home = () => {
       console.log("User present in Segment ", isPresent);
       analytics.identify(user_id, {
         email: user.name,
-      });
+      },{       
+        "hubspotutk":hubspotutk
+     });
       analytics.page("Page Viewed Home");
       analytics.track("Element Clicked", {
         attributes: {
           type: "Home",
           email: user.name
         },
-      },{       
-         "hubspotutk":hubspotutk
       });
     }
   }, [isAuthenticated, user]);
