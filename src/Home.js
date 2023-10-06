@@ -55,7 +55,7 @@ const Home = () => {
           email: user.name
         },
       },{       
-         hubspotutk:hubspotutk
+         "hubspotutk":hubspotutk
       });
     }
   }, [isAuthenticated, user]);
