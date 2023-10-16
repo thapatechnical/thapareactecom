@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/iframe-has-title */
+import React, { useEffect } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import styled from "styled-components";
 import { AnalyticsBrowser } from "@segment/analytics-next";
@@ -39,17 +40,50 @@ const Contact = () => {
       }
     }
   `;
-  analytics.page("Page Viewed Contacts");
-  let properties = {
-    attributes: {
-      type: "Contacts"
+  useEffect(() => {
+    analytics.page("Page Viewed Contacts");
+    console.log("In here");
+    let properties = {
+      attributes: {
+        type: "Contacts",
+      },
+    };
+    if (isAuthenticated) {
+      properties.attributes.email = user.email;
     }
-  };
-  if(isAuthenticated)
-  {
-    properties.attributes.email = user.email;
-  }
-  analytics.track("Element Clicked", properties);
+    analytics.track("Element Clicked", properties);
+
+    // Load HubSpot Forms script dynamically
+    const script = document.createElement("script");
+    script.src = "https://js-eu1.hsforms.net/forms/embed/v2.js";
+    document.head.appendChild(script);
+
+    script.onload = () => {
+      // Only create the form when the script has loaded
+      if (isAuthenticated && user.email) {
+        window.hbspt.forms.create({
+          region: "eu1",
+          portalId: "143378670",
+          formId: "cd7f362f-c71d-435e-8f1b-bc8971334c54",
+          onFormSubmit: () => {
+            // Optional callback function after form submission
+            console.log("Form submitted!");
+          },
+        });
+      }
+    };
+  }, [isAuthenticated, user]);
+  // analytics.page("Page Viewed Contacts");
+  // let properties = {
+  //   attributes: {
+  //     type: "Contacts"
+  //   }
+  // };
+  // if(isAuthenticated)
+  // {
+  //   properties.attributes.email = user.email;
+  // }
+  // analytics.track("Element Clicked", properties);
   return (
     <Wrapper>
       <h2 className="common-heading">Contact page</h2>
@@ -90,6 +124,12 @@ const Contact = () => {
 
             <input type="submit" value="send" />
           </form>
+        </div>
+      </div>
+      
+      {/* Embed HubSpot Form */}
+      <div className="container">
+        <div className="contact-form">
         </div>
       </div>
     </Wrapper>

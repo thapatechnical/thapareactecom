@@ -27,11 +27,11 @@ const Nav = () => {
 
   const onTrack = (type) => {
     console.log("Inside track call and type ", type);
-    analytics.track("Element Clicked", {
-      attributes: {
-        type: type
-      },
-    });
+    // analytics.track("Element Clicked", {
+    //   attributes: {
+    //     type: type
+    //   },
+    // });
   }
 
   const Nav = styled.nav`

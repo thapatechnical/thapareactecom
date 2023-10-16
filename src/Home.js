@@ -50,7 +50,9 @@ const Home = () => {
       },{       
         "hubspotutk":hubspotutk
      });
-      analytics.page("Page Viewed Home");
+      analytics.page("Page Viewed Home",{
+        type: "Test1"
+      });
       analytics.track("Element Clicked", {
         attributes: {
           type: "Home",
