@@ -7,19 +7,16 @@ import { AnalyticsBrowser} from "@segment/analytics-next";
 import { v4 as uuidv4 } from 'uuid';
 import axios from "axios";
 import { useAuth0 } from "@auth0/auth0-react";
-
 const writeKey = process.env.WRITE_KEY;
 const analytics = AnalyticsBrowser.load({ writeKey: "trt2mhv6rjiqM8rpsRExWM1pBiguWqUm" });
 const Home = () => {
   const { isAuthenticated, user } = useAuth0();
-
   useEffect(() => {
     // Check if the user is authenticated
     let isPresent = false;
     let user_id = localStorage.getItem("ajs_user_id");
     // Read cookies using document.cookie
     const cookies = document.cookie;
-
     // Parse cookies into an object
     const cookieObject = cookies
       .split(';')
@@ -28,13 +25,10 @@ const Home = () => {
         acc[key] = value;
         return acc;
       }, {});
-
     // Access individual cookies by name
     const hubspotutk = cookieObject.hubspotutk;
-
     // Do something with the cookie value
     console.log('Hubspot utk:', hubspotutk);
-
     // Check if ajs_user_id is present and not null
     if (user_id && user_id !== "null") {
       isPresent = true;
@@ -45,19 +39,37 @@ const Home = () => {
     if (isAuthenticated && !(isPresent)) {
       // Send an identify call to Segment
       console.log("User present in Segment ", isPresent);
-      analytics.identify(user_id, {
+      analytics.identify({
         email: user.name,
-      },{       
-        "hubspotutk":hubspotutk
+      },{
+        "hubspotutk":hubspotutk,
+        externalIds: [
+          {
+            id: hubspotutk,
+            type: 'hubspot_id',
+            collection: 'users',
+            encoding: 'none'
+          }
+        ]
      });
       analytics.page("Page Viewed Home",{
-        type: "Test1"
+        type: "Home"
       });
       analytics.track("Element Clicked", {
         attributes: {
           type: "Home",
           email: user.name
         },
+      },
+      {
+        externalIds: [
+          {
+            id: hubspotutk,
+            type: 'hubspot_id',
+            collection: 'users',
+            encoding: 'none'
+          }
+        ]
       });
     }
   }, [isAuthenticated, user]);
@@ -73,5 +85,4 @@ const Home = () => {
     </>
   );
 };
-
 export default Home;
