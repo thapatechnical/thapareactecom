@@ -53,25 +53,25 @@ const Contact = () => {
     }
     analytics.track("Element Clicked", properties);
 
-    // Load HubSpot Forms script dynamically
-    const script = document.createElement("script");
-    script.src = "https://js-eu1.hsforms.net/forms/embed/v2.js";
-    document.head.appendChild(script);
+    // // Load HubSpot Forms script dynamically
+    // const script = document.createElement("script");
+    // script.src = "https://js-eu1.hsforms.net/forms/embed/v2.js";
+    // document.head.appendChild(script);
 
-    script.onload = () => {
-      // Only create the form when the script has loaded
-      if (isAuthenticated && user.email) {
-        window.hbspt.forms.create({
-          region: "eu1",
-          portalId: "143378670",
-          formId: "cd7f362f-c71d-435e-8f1b-bc8971334c54",
-          onFormSubmit: () => {
-            // Optional callback function after form submission
-            console.log("Form submitted!");
-          },
-        });
-      }
-    };
+    // script.onload = () => {
+    //   // Only create the form when the script has loaded
+    //   if (isAuthenticated && user.email) {
+    //     window.hbspt.forms.create({
+    //       region: "eu1",
+    //       portalId: "143378670",
+    //       formId: "cd7f362f-c71d-435e-8f1b-bc8971334c54",
+    //       onFormSubmit: () => {
+    //         // Optional callback function after form submission
+    //         console.log("Form submitted!");
+    //       },
+    //     });
+    //   }
+    // };
   }, [isAuthenticated, user]);
   // analytics.page("Page Viewed Contacts");
   // let properties = {
