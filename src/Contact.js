@@ -5,6 +5,8 @@ import styled from "styled-components";
 import { AnalyticsBrowser } from "@segment/analytics-next";
 const writeKey = process.env.write_key;
 const analytics = AnalyticsBrowser.load({ writeKey: "trt2mhv6rjiqM8rpsRExWM1pBiguWqUm" });
+<script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143378670.js"></script>
+
 
 const Contact = () => {
   const { isAuthenticated, user } = useAuth0();
