@@ -94,7 +94,7 @@ const Contact = () => {
 
       <div className="container">
         <div className="contact-form">
-          <form
+          <form target="_blank"
             action="https://formspree.io/f/xrgwozqz"
             method="POST"
             className="contact-inputs">
