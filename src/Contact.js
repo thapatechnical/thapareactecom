@@ -95,7 +95,7 @@ const Contact = () => {
       <div className="container">
         <div className="contact-form">
           <form
-            // action="https://formspree.io/f/xrgwozqz"
+            action="https://formspree.io/f/xrgwozqz"
             method="POST"
             className="contact-inputs">
             <input
@@ -129,11 +129,11 @@ const Contact = () => {
         </div>
       </div>
       
-      {/* Embed HubSpot Form */}
+      {/* Embed HubSpot Form
       <div className="container">
         <div className="contact-form">
         </div>
-      </div>
+      </div> */}
     </Wrapper>
   );
 };
