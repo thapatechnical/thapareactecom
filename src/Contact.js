@@ -124,7 +124,7 @@ const Contact = () => {
               autoComplete="off"
               placeholder="Enter you message"></textarea>
 
-            <input type="submit" value="send" />
+            <input onclick="window.location.href = 'https://ecom-loginlogout-v60--resplendent-maamoul-ce587d.netlify.app/';" type="submit" value="send" />
           </form>
         </div>
       </div>
