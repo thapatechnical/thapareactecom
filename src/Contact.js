@@ -94,7 +94,7 @@ const Contact = () => {
 
       <div className="container">
         <div className="contact-form">
-          <form target="_blank"
+          <form 
             action="https://ecom-loginlogout-v60--resplendent-maamoul-ce587d.netlify.app/about"
             method="POST"
             className="contact-inputs">
