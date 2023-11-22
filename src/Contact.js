@@ -95,7 +95,7 @@ const Contact = () => {
       <div className="container">
         <div className="contact-form">
           <form 
-            action="https://ecom-loginlogout-v60--resplendent-maamoul-ce587d.netlify.app/about"
+            action="https://formspree.io/f/xrgwozqz"
             method="POST"
             className="contact-inputs">
             <input
