@@ -25,7 +25,7 @@ const handleSubmit = async (e) => {
     },
   });
 
-  window.location.href = 'https://ecom-loginlogout-v60--resplendent-maamoul-ce587d.netlify.app/';
+  window.alert('Form Submitted Successfully');
 };
 
 
