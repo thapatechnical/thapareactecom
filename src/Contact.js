@@ -24,6 +24,8 @@ const handleSubmit = async (e) => {
       message: message,
     },
   });
+
+  window.location.href = 'https://ecom-loginlogout-v60--resplendent-maamoul-ce587d.netlify.app/';
 };
 
 
