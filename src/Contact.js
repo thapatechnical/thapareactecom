@@ -16,7 +16,7 @@ const handleSubmit = async (e) => {
 
 
   // Track analytics event
-  analytics.track('Form Submitted', {
+  analytics.track('Non-Hubspot Form Submitted', {
     attributes: {
       type: 'Contacts',
       userName: username,
