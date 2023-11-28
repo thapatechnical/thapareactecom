@@ -5,7 +5,27 @@ import styled from "styled-components";
 import { AnalyticsBrowser } from "@segment/analytics-next";
 const writeKey = process.env.write_key;
 const analytics = AnalyticsBrowser.load({ writeKey: "trt2mhv6rjiqM8rpsRExWM1pBiguWqUm" });
-{/* <script type="text/javascript" id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/143378670.js"></script> */}
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  // Access form field values
+  const username = e.target.username.value;
+  const email = e.target.Email.value;
+  const message = e.target.Message.value;
+
+
+  // Track analytics event
+  analytics.track('Form Submitted', {
+    attributes: {
+      type: 'Contacts',
+      userName: username,
+      email: email,
+      message: message,
+    },
+  });
+};
+
 
 
 const Contact = () => {
@@ -54,26 +74,6 @@ const Contact = () => {
       properties.attributes.email = user.email;
     }
     analytics.track("Element Clicked", properties);
-
-    // // Load HubSpot Forms script dynamically
-    // const script = document.createElement("script");
-    // script.src = "https://js-eu1.hsforms.net/forms/embed/v2.js";
-    // document.head.appendChild(script);
-
-    // script.onload = () => {
-    //   // Only create the form when the script has loaded
-    //   if (isAuthenticated && user.email) {
-    //     window.hbspt.forms.create({
-    //       region: "eu1",
-    //       portalId: "143378670",
-    //       formId: "cd7f362f-c71d-435e-8f1b-bc8971334c54",
-    //       onFormSubmit: () => {
-    //         // Optional callback function after form submission
-    //         console.log("Form submitted!");
-    //       },
-    //     });
-    //   }
-    // };
   }, [isAuthenticated, user]);
   // analytics.page("Page Viewed Contacts");
   // let properties = {
@@ -95,8 +95,9 @@ const Contact = () => {
       <div className="container">
         <div className="contact-form">
           <form 
-            action="https://formspree.io/f/xrgwozqz"
-            method="POST"
+            // action="https://formspree.io/f/xrgwozqz"
+            // method="POST"
+            onSubmit={handleSubmit}
             className="contact-inputs">
             <input
               type="text"
@@ -124,7 +125,7 @@ const Contact = () => {
               autoComplete="off"
               placeholder="Enter you message"></textarea>
 
-            <input onclick="window.location.href = 'https://ecom-loginlogout-v60--resplendent-maamoul-ce587d.netlify.app/';" type="submit" value="send" />
+            <input type="submit" value="send" />
           </form>
         </div>
       </div>
