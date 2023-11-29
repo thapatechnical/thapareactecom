@@ -5,7 +5,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 const writeKey = process.env.WRITE_KEY;
 console.log("Write key ", writeKey);
 const analytics = AnalyticsBrowser.load({ writeKey: "trt2mhv6rjiqM8rpsRExWM1pBiguWqUm" });
-
+analytics.debug(true);
 const About = () => {
   const { isAuthenticated, user } = useAuth0();
   analytics.page("Page Viewed About");
