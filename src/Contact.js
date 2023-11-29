@@ -6,6 +6,8 @@ import { AnalyticsBrowser } from "@segment/analytics-next";
 const writeKey = process.env.write_key;
 const analytics = AnalyticsBrowser.load({ writeKey: "trt2mhv6rjiqM8rpsRExWM1pBiguWqUm" });
 
+analytics.debug(true);
+
 const handleSubmit = async (e) => {
   e.preventDefault();
 
@@ -105,7 +107,7 @@ const Contact = () => {
               type="text"
               placeholder="username"
               name="username"
-              value={isAuthenticated ? user.name : ""}
+              // value={isAuthenticated ? user.name : ""}
               required
               autoComplete="off"
             />
@@ -115,7 +117,7 @@ const Contact = () => {
               name="Email"
               placeholder="Email"
               autoComplete="off"
-              value={isAuthenticated ? user.email : ""}
+              // value={isAuthenticated ? user.email : ""}
               required
             />
 
