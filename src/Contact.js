@@ -102,7 +102,7 @@ const Contact = () => {
           <form 
             // action="https://formspree.io/f/xrgwozqz"
             // method="POST"
-            onSubmit={handleSubmit}
+            // onSubmit={handleSubmit}
             className="contact-inputs">
             <input
               type="text"
@@ -135,11 +135,6 @@ const Contact = () => {
         </div>
       </div>
       
-      {/* Embed HubSpot Form
-      <div className="container">
-        <div className="contact-form">
-        </div>
-      </div> */}
     </Wrapper>
   );
 };
