@@ -32,7 +32,7 @@ const Footer = () => {
             </div>
             <div className="footer-subscribe">
               <h3>Subscribe to get important updates</h3>
-              <form action="#">
+              <form>
                 <input type="email" name="email" placeholder="YOUR E-MAIL" />
 
                 <input type="submit" value="subscribe" />
