@@ -102,7 +102,7 @@ const Contact = () => {
           <form 
             // action="https://formspree.io/f/xrgwozqz"
             // method="POST"
-            // onSubmit={handleSubmit}
+            onSubmit={handleSubmit}
             className="contact-inputs">
             <input
               type="text"
