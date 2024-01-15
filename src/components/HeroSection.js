@@ -26,7 +26,7 @@ const HeroSection = ({ myData }) => {
           <div className="hero-section-image">
             <figure>
               <img
-                src="images/hero.jpg"
+                src="/images/hero.jpg"
                 alt="hero-section"
                 className="img-style"
               />
@@ -57,6 +57,8 @@ const Wrapper = styled.section`
 
     .intro-data {
       margin-bottom: 0;
+      color: rgb(235, 143, 52);
+      font-weight: bold;
     }
   }
 
@@ -74,7 +76,6 @@ const Wrapper = styled.section`
       content: "";
       width: 60%;
       height: 80%;
-      background-color: rgba(81, 56, 238, 0.4);
       position: absolute;
       left: 50%;
       top: -5rem;

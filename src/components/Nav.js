@@ -59,14 +59,12 @@ const Nav = () => {
         width: 2.4rem;
         height: 2.4rem;
         position: absolute;
-        background-color: #000;
-        color: #000;
         border-radius: 50%;
         display: grid;
         place-items: center;
         top: -20%;
         left: 70%;
-        background-color: ${({ theme }) => theme.colors.helper};
+        background-color: rgb(235, 143, 52);
       }
     }
 
@@ -155,7 +153,7 @@ const Nav = () => {
         .cart-total--item {
           width: 4.2rem;
           height: 4.2rem;
-          font-size: 2rem;
+          font-size: 4rem;
         }
       }
 

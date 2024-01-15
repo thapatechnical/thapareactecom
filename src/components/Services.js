@@ -17,17 +17,13 @@ const Services = () => {
             </div>
           </div>
           <div className="services-2">
-            <div className="services-cloum-2">
-              <div>
-                <MdSecurity className="icon" />
-                <h3>Non-Contact Delivery</h3>
-              </div>
+            <div className="services-column-2">
+              <MdSecurity className="icon" />
+              <h3>Non-Contact Delivery</h3>
             </div>
-            <div className="services-cloum-2">
-              <div>
-                <GiReceiveMoney className="icon" />
-                <h3>Super Fast and Free Delivery</h3>
-              </div>
+            <div className="services-column-2">
+              <GiReceiveMoney className="icon" />
+              <h3>Super Fast and Free Delivery</h3>
             </div>
           </div>
           <div className="services-3">
@@ -60,7 +56,7 @@ const Wrapper = styled.section`
     background: ${({ theme }) => theme.colors.bg};
     text-align: center;
     border-radius: 2rem;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 2px;
   }
 
   .services-2 {
@@ -68,9 +64,9 @@ const Wrapper = styled.section`
     background-color: transparent;
     box-shadow: none;
 
-    .services-colum-2 {
-      background: ${({ theme }) => theme.colors.bg};
+    .services-column-2 {
       display: flex;
+      background: ${({ theme }) => theme.colors.bg};
       flex-direction: row;
       flex: 1;
       justify-content: center;
@@ -100,7 +96,7 @@ const Wrapper = styled.section`
     padding: 2rem;
     border-radius: 50%;
     background-color: #fff;
-    color: #5138ee;
+    color: rgb(235, 143, 52);
   }
 `;
 
