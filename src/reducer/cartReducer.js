@@ -4,6 +4,7 @@ const cartReducer = (state, action) => {
 
     // tackle the existing product
 
+    if (state.cart !== null) {
     let existingProduct = state.cart.find(
       (curItem) => curItem.id === id + color
     );
@@ -45,6 +46,7 @@ const cartReducer = (state, action) => {
       };
     }
   }
+}
 
   // to set the increment and decrement
   if (action.type === "SET_DECREMENT") {
@@ -134,7 +136,7 @@ const cartReducer = (state, action) => {
   //   };
   // }
 
-  if (action.type === "CART_ITEM_PRICE_TOTAL") {
+  if (action.type === "CART_ITEM_PRICE_TOTAL" && state.cart !== null) {
     let { total_item, total_price } = state.cart.reduce(
       (accum, curElem) => {
         let { price, amount } = curElem;
