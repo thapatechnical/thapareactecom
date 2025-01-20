@@ -136,7 +136,7 @@ ${"" /* resuable code section  */}
       border-radius: 2rem;
     }
 
-input, textarea{
+input, textarea{b 
     max-width: 50rem;
     color: ${({ theme }) => theme.colors.black};
     padding: 1.6rem 2.4rem;
@@ -157,17 +157,18 @@ input, textarea{
     cursor: pointer;
     }
 
-@media (max-width: ${({ theme }) => theme.media.tab}) {
+  '' @media (max-width: ${({ theme }) => theme.media.tab}) {
     .container {
     max-width: 130rem;
     padding: 0 3.2rem;
   }
   }
 
-   @media (max-width: ${({ theme }) => theme.media.mobile}) {
+   @media (max-width: ${({ theme }) => theme.media.mobile})
        html {
       font-size: 50%;
-    }
+    } 
+    
 
 .grid{
   gap: 3.2rem;
@@ -175,6 +176,6 @@ input, textarea{
       .grid-two-column , .grid-three-column, .grid-four-column{
           grid-template-columns: 1fr;
         }
-    }
+    
 
 `;
