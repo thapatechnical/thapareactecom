@@ -1,7 +1,8 @@
 import React from "react";
 
 const App = () => {
-  return <div>Welcome to Thapa React E-Commerce Website</div>;
+
+  return <div>How This Will Work Bhaiya</div>;
 };
 
 export default App;
