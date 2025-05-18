@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Cart = () => {
-  return <Wrapper></Wrapper>;
+  return <Wrapper>hi how are you</Wrapper>;
 };
 
 const Wrapper = styled.section`
